@@ -1,0 +1,335 @@
+/* Sara Pereira up201906821*/
+
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap);
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    min-width: 450px;
+    scroll-behavior: smooth;
+}
+
+/*body {
+    
+}*/
+
+#header{
+    height: 100%;
+    width: 100%;
+    padding-top: 15%;
+    padding-bottom: 10%;
+    margin: 0 auto;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    background-image: url(../img/wideputin_1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+nav {
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 154, 154, 20%);
+    position: fixed;
+    padding: 10px;
+    transform: translateY(0);
+    transition: 0.6s;
+    
+}
+
+nav.active {
+    transform: translateY(-100%);
+}
+
+.arrowIcon{
+    top: 50px;
+    width: 40px;
+    height: auto;
+    position: fixed;
+    cursor: pointer;
+    padding-left: 3%;
+}
+
+#dropArrowIcon{
+    display: none;
+}
+
+#gamePage {
+    display: inline-block;
+    color: white;
+    font-family: 'Rubik';
+    font-size: 14pt;
+    padding-left: 2%;
+    text-transform: uppercase;
+}
+
+#widePutinIcon {
+    display: inline-block;
+    width: 3%;
+    padding-left: 2%;
+}
+
+h1, h2, h3, button{
+    user-select: none;
+}
+
+h1, #increase, #decrease, p, #nameTroll, #widePutinSpan, #titleSpan, .textSpan, p a, p a:visited, #insertName, #menuitems a{
+    transition: 0.4s;
+    transition-timing-function: ease-in-out;
+}
+
+.commonArticleProperties{
+    height: 100%;
+    width: auto;
+    padding: 15% 15% 10% 15%;
+    background-color: #170729;
+}
+
+h1{
+    display: block;
+    /*user can't select text*/
+    line-height: 0.8em;
+    margin: 0 auto;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100vw;
+}
+
+#wide{
+    font-size: 100pt;
+    font-weight: 400;
+    color: white;
+}
+
+#increase, #decrease{
+    display: inline-block;
+    margin-top: 10%;
+    padding: 5%;
+    background: none;
+    color: white;
+    font-family: 'Rubik';
+    font-size: 20pt;
+    border: none;
+    cursor: pointer;
+}
+
+#increase:hover, #decrease:hover{
+    font-size: 24pt;
+}
+
+h2{
+    padding-bottom: 2%;
+    font-family: 'Rubik', sans-serif;
+    font-size: 30pt;
+    font-weight: 400;
+    color: white;
+    text-transform: uppercase;
+}
+
+#titleSpan:hover{
+    font-size: 34pt;
+    font-weight: 900;
+}
+
+p, #nameTroll, #insertName{
+    font-size: 14pt;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    line-height: 22pt;
+}
+
+.textSpan:hover, p a:hover, #nameTroll:hover, #insertName:hover{
+    font-size: 16pt;
+    font-weight: 700;
+}
+
+.secondParagraph, #nameTroll {
+    padding-top: 2%;
+}
+
+p a, p a:visited {
+    text-decoration: none;
+    color: rgb(255, 154, 154);
+}
+
+#nameArticle{
+    text-align: right;
+}
+
+#titleChange2 {
+    display: none;
+}
+
+#widePutinSpan:hover {
+    font-weight: 900;
+}
+
+#insertName{
+    margin: 0;
+    padding: 0;
+    color: rgb(255, 154, 154);
+    font-size: 14pt;
+    background: none;
+    border: none;
+}
+
+#nameTroll{
+    display: none;
+    float: right;
+    padding-top: 5%;
+    width: 100%;
+}
+
+#nameTrollScreenDecrease{
+    display: none;
+    float: right;
+    padding-top: 5%;
+    width: 50%;
+}
+
+/*
+    !Work in progress for the next exercise!
+
+#displayImage{
+    width: 500px;
+    height: 300px;
+    border: none;
+    background-position: center;
+    background-size: cover;
+  }
+
+#imageInput {
+    background-color: none;
+    font-size: 14pt;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+*/
+
+footer{
+    background-color: #170729;
+    padding: 15% 15% 5% 15%;
+}
+
+h3{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 100;
+    color: rgb(255, 154, 154);
+}
+
+/*Wide Putin Game*/
+#gamekeys{
+    background-color: #170729;
+}
+
+#containergame {
+    padding-top: 10%;
+}
+
+#game {
+    margin: auto;
+    width: 1000px;
+    height: 500px;
+    background-image: url(../img/russian_flag.png);
+    background-position: center;
+    background-size: cover;
+}
+
+#character {
+    width: 90px;
+    height: 50px;
+    position: relative;
+    top: 200px;
+    left: 90px;
+    background-image: url(../img/wide_putin.gif);
+    background-position: center;
+    background-size: cover;
+}
+
+.animate{
+    animation: jump 600ms;
+}
+
+@keyframes jump{
+    0%{top: 200px;}
+    30%{top: 100px;}
+    70%{top: 100px;}
+    100%{top: 200px;}
+}
+
+#block{
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/shouriken.gif);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    top: 170px;
+    left: 980px;
+    animation: block 1800ms infinite linear;
+    animation-delay: 2000ms;
+}
+
+@keyframes block{
+    0%{left: 1000px;}
+    100%{left: -10px;}
+}
+
+#gameOver {
+    display: none;
+    z-index: 10;
+    text-align: center;
+    padding: 10%;
+    font-family: 'Rubik', sans-serif;
+    font-size: 30pt;
+    font-weight: 400;
+    color: white;
+    text-transform: uppercase;
+}
+
+#ninjaCharacter {
+    z-index: 20;
+    width: 80px;
+    height: 90px;
+    position: relative;
+    top: 120px;
+    left: 930px;
+    background-image: url(../img/naruto.gif);
+    background-position: center;
+    background-size: cover;
+}
+
+.menuitems {
+    display: inline-block;
+    padding-left: 3%;
+}
+
+.menuitems a, .menuitems:visited{
+    font-family: 'Rubik';
+    font-size: 14pt;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#menuitems a:hover{
+    font-size: 13pt;
+}
+
+.dataNamesTest {
+    display: none;
+}
+
+#anchorsID {
+    display: block;
+}
